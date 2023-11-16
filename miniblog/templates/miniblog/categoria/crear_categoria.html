@@ -1,0 +1,18 @@
+{% extends 'miniblog/base.html' %}
+
+{% block content %}
+<div class="crear-categoria">
+    <h2>Crear nueva categoría</h2>
+    <form method="post" action="{% url 'crear_categoria' %}">
+        {% csrf_token %}
+        <label for="nombre">Nombre de la categoría:</label>
+        <input type="text" name="nombre" required>
+        <div class="botones">
+            <button type="submit">Crear</button>
+        </div>
+    </form>
+</div>
+<div class="botones">
+    <a href="{% url 'home' %}">Volver al inicio</a>
+</div>
+{% endblock %}

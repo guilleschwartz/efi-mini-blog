@@ -1,0 +1,15 @@
+{%extends 'miniblog/base.html'%}
+{%block content%}
+<div class="usuario">
+    <h2>Usuario</h2>
+    <p>Nombre: {{ usuario.username }}</p>
+    <div class="botones">
+        <a href="{% url 'editar_usuario' usuario.id %}">Editar</a>
+        <a href="{% url 'eliminar_usuario' usuario.id %}">Eliminar</a>
+    </div>
+</div>
+<div class="botones">
+    <a href="{% url 'lista_usuarios' %}">Volver a la lista de usuarios</a>
+</div>
+{%endblock%}
+```

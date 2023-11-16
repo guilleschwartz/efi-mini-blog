@@ -1,0 +1,20 @@
+{%extends 'miniblog/base.html'%}
+{%block content%}	
+<div class="usuarios">
+    <h2>Crear nuevo usuario</h2>
+    <form method="post" action="{% url 'crear_usuario' %}">
+        {% csrf_token %}
+        <label for="nombre_usuario">Nombre:</label>
+        <input type="text" name="nombre_usuario" required>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" required>
+        <div class="botones">
+            <button type="submit">Crear usuario</button>
+        </div>
+    </form>
+    <div class="botones">
+        <a href="{% url 'lista_usuarios' %}">Volver a la lista de usuarios</a>
+    </div>
+</div>
+{%endblock%}
+

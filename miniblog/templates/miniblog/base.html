@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MiniBlog</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+        }
+        .botones {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <ul>
+        <h3>Categorías:</h3>
+        {% for categoria in categorias %}
+        <li>    
+        <a href="{% url 'categoria' categoria.id %}">
+                {{ categoria.nombre }}
+        </a>
+        </li>
+        {% endfor %}
+        <a href="{% url 'crear_categoria' %}">Crear nueva categoría</a>
+    </ul>
+</body>
+</html>

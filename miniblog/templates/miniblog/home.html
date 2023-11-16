@@ -1,0 +1,11 @@
+{%extends 'miniblog/base.html'%}
+{%block content%}
+<div class="home">
+    <h2>MiniBlog</h2>
+    <p>Bienvenido a MiniBlog, un blog creado por Schwartz, Reviglio y Lozano.</p>
+    <div class="botones">
+        <a href="{% url 'lista_post' %}">Ver Posts</a>
+        <a href="{% url 'lista_usuarios' %}">Ver Usuarios</a>
+    </div>
+</div>
+{%endblock%}

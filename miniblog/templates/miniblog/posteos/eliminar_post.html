@@ -1,0 +1,22 @@
+{% extends 'miniblog/base.html' %}
+
+{% block content %}
+<div class="posteos">
+    <h2>Posteos</h2>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href="{% url 'post' post.id %}">
+                {{ post.titulo }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="botones">
+        <a href="{% url 'crear_post' %}">Agregar Post</a>
+    </div>
+</div>
+<div class="botones">
+    <a href="{% url 'home' %}">Volver al inicio</a>
+</div>
+{% endblock %}

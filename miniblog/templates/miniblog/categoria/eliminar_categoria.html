@@ -1,0 +1,21 @@
+{% extends 'miniblog/base.html' %}
+{% block content %}
+<div class="categorias">
+    <h2>Categorías</h2>
+    <ul>
+        {% for categoria in categorias %}
+        <li>
+            <a href="{% url 'categoria' categoria.id %}">
+                {{ categoria.nombre }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="botones">
+        <a href="{% url 'crear_categoria' %}">Agregar Categoría</a>
+    </div>
+</div>
+<div class="botones">
+    <a href="{% url 'home' %}">Volver al inicio</a>
+</div>
+{% endblock %}
