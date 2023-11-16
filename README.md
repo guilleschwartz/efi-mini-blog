@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Proyecto Reviglio Schwartz Lozano
 Miniblog es una aplicación de blog básica construida con Django por los Alumnos Reviglio, Schwartz y Lozano.
 
@@ -94,4 +94,4 @@ python manage.py runserver
 ```
 =======
 # efi-mini-blog
->>>>>>> e94e4fef458f0a13fdd6c706f5b73848746e3311
+
